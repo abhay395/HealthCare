@@ -5,6 +5,7 @@ const connectDb = require('../config/db');
 const app = express();
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
+const serverless = require("serverless-http");
 // const PORT = process.env.PORT || 3000;
 
 app.use(cors());
