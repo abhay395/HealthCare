@@ -5,8 +5,9 @@ const dbURI = process.env.MONGODB_URI;
 connectDb = () =>
   mongoose
     .connect(dbURI, {
-      connectTimeoutMS: 30000, // Increase timeout to 30 seconds
-      socketTimeoutMS: 45000, // Increase socket timeout to 45 seconds
+      connectTimeoutMS: 60000, // Increase timeout to 60 seconds
+      socketTimeoutMS: 60000, // Increase socket timeout to 60 seconds
+      serverSelectionTimeoutMS: 60000, // Increase server selection timeout to 60 seconds
     })
     .then(() => {
       console.log("Connected to database");
