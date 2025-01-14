@@ -4,6 +4,7 @@ const cors = require('cors');
 const connectDb = require('../config/db');
 const app = express();
 const session = require("express-session");
+const MongoStore = require("connect-mongo");
 // const PORT = process.env.PORT || 3000;
 
 app.use(cors());
@@ -13,7 +14,7 @@ app.use(
       resave: false,
       saveUninitialized: false,
       store: MongoStore.create({
-        mongoUrl: process.env.MONGODB_URL, // MongoDB connection string
+        mongoUrl: process.env.MONGODB_URI, // MongoDB connection string
         ttl: 14 * 24 * 60 * 60, // Sessions expire after 14 days
       }),
       cookie: {
