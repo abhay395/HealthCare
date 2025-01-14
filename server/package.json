@@ -4,19 +4,21 @@
   "description": "This is a backend for Hospital management ",
   "main": "index.js",
   "scripts": {
-   "start": "nodemon index.js"
+    "start": "nodemon index.js"
   },
-  
   "keywords": [
     "index.js"
   ],
   "author": "Abhay Prajapati",
   "license": "ISC",
   "dependencies": {
+    "connect-mongo": "^5.1.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "express-session": "^1.18.1",
     "mongoose": "^8.9.4",
-    "nodemon": "^3.1.9"
+    "nodemon": "^3.1.9",
+    "serverless-http": "^3.2.0"
   }
 }
