@@ -25,7 +25,7 @@ app.use(
   );
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+app.get("/", (req, res) => res.send("Hello world"));
 app.use('/api/doctor', require('../routes/Doctor.routes'));
 app.use('/api/patient', require('../routes/Pateint.routes'));
 app.use('/api/appointment', require('../routes/Appoinment.routes'));
